@@ -1,0 +1,636 @@
+
+:root{
+  --color-primary: #FFFDF8;     /* 0ea5e9 azul del logo */
+  --color-primary-dark: #FDF9F0;  /* 0284c7 azul oscur del logo */
+  --color-primary_logo: #0ea5e9;     /* 0ea5e9 azul del logo */
+  --color-primary_logohover: #000;     /* 0ea5e9 azul del logo */
+ 
+  --color-accent:  var(--color-primary);      /* rojo (solo para destacar) */
+  --color-dark: #0f1724;
+  --color-text: #333;
+  --color-bg: #f8fafc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-primary);  
+  color: #555;
+}
+
+/* HEADER Y NAVBAR */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 253, 248, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 42px;
+  color: #d88a99;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: #C76C83;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  display: none;
+  overflow: hidden;
+}
+
+.submenu a {
+  display: block;
+  padding: 12px 18px;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* SECCIÓN HERO (PORTADA CON FONDO) */
+.hero {
+background: url('../images/portada.jpg') no-repeat center center/contain;
+  
+  text-align: left;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.hero > div {
+  max-width: 500px;
+}
+.hero h2 {
+ font-family: 'Caveat', cursive;
+  font-size: 55px;
+  color: #7A5C61;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Segunda línea en cursiva: "hechas con creatividad" */
+.hero h2 .destacado-cursiva {
+  font-family: 'Caveat', cursive;
+  font-size: 40px; /* Caveat se ajusta un poco más grande para igualar la proporción */
+  color: #d88a99;
+  font-weight: 600;
+  display: block;
+}
+
+/* Párrafo y botones */
+.hero p, 
+.boton-rosa, 
+.boton-verde {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.hero h2 span {
+  color: #B86C86;
+}
+
+.hero p {
+  margin: 20px 0 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.boton {
+  display: inline-block;
+  background: #D98CA0;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.boton:hover {
+  background: #B86C86;
+  transform: translateY(-3px);
+}
+
+/* OTRAS SECCIONES Y COMPONENTES */
+section {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 38px;
+  color: #7A5C61;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #777;
+}
+/* Título y subtítulo del carrusel */
+#productos .titulo {
+  font-family: 'Shantell Sans', cursive;
+  color: #684C57;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+#productos .separador-corazon {
+  margin: 10px auto;
+}
+
+#productos .subtitulo {
+  font-family: 'Quicksand', sans-serif;
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+/* Grid de Tarjetas */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Estructura de cada tarjeta */
+.card-producto {
+  background: var(--color-primary-dark); 
+ 
+  border-radius: 24px;
+  border: 1px solid #F0E8E6;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(216, 138, 153, 0.15);
+}
+
+/* Columna izquierda (Texto e Icono) */
+.card-info {
+  flex: 1;
+  padding: 24px 18px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-icono {
+  width: 46px;
+  height: 46px;
+  background-color: #C88E9B;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.card-info h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  color: #7A5C61;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card-info p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+/* Botón Rosa Ovalado */
+.btn-card {
+  display: inline-block;
+  background-color: #D98CA0;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card:hover {
+  background-color: #B86C86;
+}
+.card-img-wrapper {
+  width: 48%;
+  min-height: 190px;
+  position: relative;
+  
+  /* 1. Color de fondo similar a la madera/fondo de tu foto para rellenar los huecos */
+  background-color: background-color: var(--color-primary); 
+  
+  /* Redondeamos las esquinas derechas para encajar con la tarjeta */
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden; 
+}
+
+.card-img-wrapper img {
+width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la foto completa al 100% */
+  object-position: center; /* Centra la camiseta */
+  display: block;
+ /* Máscara radial: borra bordes arriba, abajo e izquierda */
+  -webkit-mask-image: radial-gradient(
+    ellipse at 70% 50%, 
+    black 40%, 
+    transparent 85%
+  );
+  mask-image: radial-gradient(
+    ellipse at 70% 50%, 
+    black 40%, 
+    transparent 85%
+  );
+
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 480px) {
+  .card-producto {
+    flex-direction: column;
+  }
+  
+  .card-img-wrapper {
+    width: 100%;
+    height: 180px;
+  }
+}
+.item {
+  min-width: 300px;
+  scroll-snap-align: center;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.item h4 {
+  padding: 15px;
+  text-align: center;
+  color: #7A5C61;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.bloque {
+  background: #FFF;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,.05);
+}
+
+.bloque h4 {
+  color: #C76C83;
+  margin-bottom: 12px;
+}
+
+.contacto {
+  text-align: center;
+  background: #F8F5FF;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+footer {
+  background: #7A5C61;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+footer a {
+  color: #FFD8E3;
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: .8;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: #7A5C61;
+  cursor: pointer;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  z-index: 999;
+}
+
+
+
+/* Divisor con líneas y corazón central */
+.separador-corazon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+  max-width: 320px;
+}
+
+.separador-corazon .linea {
+  flex: 1;
+  height: 1.5px;
+  background-color: #b5cdc4;
+  opacity: 0.7;
+}
+
+.separador-corazon .corazon {
+  color: #a3c2b7;
+  font-size: 16px;
+}
+
+/* Contenedor de botones flotantes */
+.hero-botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* Botón Rosa con Corazón */
+.boton-rosa {
+  background-color: #d88a99;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(216, 138, 153, 0.25);
+}
+
+.boton-rosa:hover {
+  background-color: #c47584;
+  transform: translateY(-2px);
+}
+
+/* Botón Verde/Borde con WhatsApp */
+.boton-verde {
+  background-color: transparent;
+  color: #556b62;
+  border: 1.5px solid #a8c3b8;
+  padding: 11px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.boton-verde:hover {
+  background-color: rgba(168, 195, 184, 0.15);
+  transform: translateY(-2px);
+}
+
+/* MEDIA QUERIES (MÓVILES) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background: var(--color-primary);  
+    display: none;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav a {
+    display: block;
+    padding: 18px;
+  }
+
+  .dropdown:hover .submenu {
+    display: none;
+  }
+
+  .submenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    display: block;
+    background: #FDF7FA;
+  }
+
+ /* Asegura que el hero cubra el 100% en pantallas móviles */
+  .hero {
+	  background: url('../images/portadamovil.jpg') no-repeat center center/contain;
+ 
+ height: auto; 
+    min-height: unset; 
+    
+    /* Le damos una altura máxima razonable */
+    max-height: 520px; 
+    
+    /* Ajustes de relleno y encuadre */
+    padding-top: 100px; /* Margen para librar el menú fijo */
+    padding-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    background-size: cover;
+    
+  
+  }
+
+  /* Si el menú desplegable abierto tapa parte del hero */
+  nav {
+    position: absolute;
+    top: 100%; /* Se despliega justo debajo del header */
+    left: 0;
+    width: 100%;
+    background: rgba(255, 253, 248, 0.98);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero > div {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero .boton {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+	
+  }
+
+  .card img {
+    height: 260px;
+  }
+
+  .carrusel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .item {
+    min-width: 85%;
+  }
+
+  section {
+    padding: 60px 18px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  footer {
+    text-align: center;
+  }
+}

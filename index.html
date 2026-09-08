@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIKA | Manualidades unicas hechas a mano</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Quicksand:wght@400;500;600&family=Shantell+Sans:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+<body>
+<header>
+  <div class="navbar">
+
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo unika">
+      <h1>Unika</h1>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="#productos">Productos ▾</a>
+          <div class="submenu">
+            <a href="camisetas.html">Camisetas</a>
+            <a href="adornos.html">Adornos</a>
+            <a href="llaveros.html">Llaveros</a>
+          </div>
+        </li>
+
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+<section class="hero" id="inicio">
+  <div>  
+  </br>
+  </br>
+  </br>
+    <h2>Manualidades únicas<br><span class="destacado-cursiva">hechas con creatividad</span></h2>
+
+    <!-- Separador con líneas y corazón -->
+    <div class="separador-corazon">
+      <span class="linea"></span>
+      <span class="corazon">♥</span>
+      <span class="linea"></span>
+    </div>
+
+    <p>
+      Camisetas dibujadas con lejía, adornos decorativos, llaveros personalizados y muchas más creaciones hechas a mano con mucho cariño.
+    </p>
+
+    <!-- Botones del Hero -->
+    <div class="hero-botones">
+      <a href="#productos" class="boton-rosa">Ver productos ♥</a>
+      <a href="https://wa.me/34600000000" target="_blank" class="boton-verde">Contactar 💬</a>
+    </div>
+  </div>
+</section>
+<section id="productos">
+  <h2 class="titulo">Nuestros productos</h2>
+  
+  <div class="separador-corazon">
+    <span class="linea"></span>
+    <span class="corazon">♥</span>
+    <span class="linea"></span>
+  </div>
+  
+  <p class="subtitulo">Cada pieza es diferente porque está hecha a mano.</p>
+
+  <div class="productos-grid">
+
+    <!-- Tarjeta 1: Camisetas -->
+    <div class="card-producto">
+      <div class="card-info">
+      <h3>Camisetas</h3>
+        <p>Diseños únicos dibujados con lejía sobre tela.</p>
+        <a href="camisetas.html" class="btn-card">Ver camisetas</a>
+      </div>
+      <div class="card-img-wrapper">
+        <img src="images/camiseta.png" alt="Camisetas pintadas con lejía">
+      </div>
+    </div>
+
+    <!-- Tarjeta 2: Adornos -->
+    <div class="card-producto">
+      <div class="card-info">
+        <h3>Adornos</h3>
+        <p>Decoración artesanal para dar vida a cualquier rincón.</p>
+        <a href="adornos.html" class="btn-card">Ver adornos</a>
+      </div>
+      <div class="card-img-wrapper">
+        <img src="img/adorno1.jpg" alt="Adornos artesanales">
+      </div>
+    </div>
+
+    <!-- Tarjeta 3: Llaveros -->
+    <div class="card-producto">
+      <div class="card-info">
+        <h3>Llaveros</h3>
+        <p>Llaveros personalizados hechos a mano.</p>
+        <a href="llaveros.html" class="btn-card">Ver llaveros</a>
+      </div>
+      <div class="card-img-wrapper">
+        <img src="img/llavero1.jpg" alt="Llaveros personalizados">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+
+  <h2 class="titulo">Colecciones</h2>
+
+  <div class="productos">
+
+    <div class="card">
+      <img src="img/camiseta1.jpg" alt="Camisetas">
+      <h3>Camisetas</h3>
+      <p>Diseños originales realizados con la técnica de lejía sobre algodón. Cada camiseta es irrepetible.</p>
+      <a href="camisetas.html">Ver colección</a>
+    </div>
+
+    <div class="card">
+      <img src="img/adorno1.jpg" alt="Adornos">
+      <h3>Adornos</h3>
+      <p>Decoración artesanal para regalar o dar un toque especial a cualquier rincón de tu casa.</p>
+      <a href="adornos.html">Ver colección</a>
+    </div>
+
+    <div class="card">
+      <img src="img/llavero1.jpg" alt="Llaveros">
+      <h3>Llaveros</h3>
+      <p>Llaveros hechos a mano y totalmente personalizables con nombres, dibujos o colores.</p>
+      <a href="llaveros.html">Ver colección</a>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="sobre">
+
+  <h2 class="titulo">¿Por qué Unika?</h2>
+
+  <div class="sobre">
+
+    <div class="bloque">
+      <h4>🎨 Hecho a mano</h4>
+      <p>Cada pieza se diseña y se crea de manera artesanal </p>
+    </div>
+
+    <div class="bloque">
+      <h4>🌿 Diseños únicos</h4>
+      <p>No hay dos camisetas iguales. Cada dibujo tiene personalidad propia. Cada pieza es <strong>Unika.</strong></p>
+    </div>
+
+    <div class="bloque">
+      <h4>💚 Personalización</h4>
+      <p>Podemos crear diseños exclusivos para regalos, familias o eventos.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contacto">
+
+  <div class="contacto">
+
+    <h2 class="titulo">¿Hablamos?</h2>
+
+    <p>Si quieres una camiseta personalizada o cualquier otra manualidad, escríbenos.</p>
+
+    <br>
+
+    <a class="boton" href="https://wa.me/34600000000" target="_blank">
+      WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="footer">
+
+    <div>
+      <h3>Unika</h3>
+      <p>Manualidades hechas a mano con creatividad, color y unícas.</p>
+    </div>
+
+    <div>
+      <h3>Información legal</h3>
+      <a href="aviso-legal.html">Aviso Legal</a>
+      <a href="privacidad.html">Política de Privacidad</a>
+      <a href="cookies.html">Política de Cookies</a>
+      <a href="rgpd.html">Protección de Datos (RGPD)</a>
+    </div>
+
+    <div>
+      <h3>Redes sociales</h3>
+      <a href="https://linkedin.com">LinkedIn</a>
+      <a href="https://wa.me/34600000000">WhatsApp</a>
+      <a href="mailto:unika@gmail.es">unika@gmail.es</a>
+    </div>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 unika. Todos los derechos reservados.
+    Cumplimiento del Reglamento General de Protección de Datos (RGPD) y Ley de Servicios de la Sociedad de la Información (LSSI-CE).
+  </p>
+
+</footer>
+
+</body>
+<a href="https://wa.me/346XXXXXXXX"
+   class="whatsapp"
+   target="_blank">
+   💬
+</a>
+</html>
